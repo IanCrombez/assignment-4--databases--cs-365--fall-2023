@@ -95,10 +95,17 @@ INSERT INTO track VALUES (6, 1, 9, 'Heads Up', '4.57');
 INSERT INTO track VALUES (6, 1, 10, 'Above Control', '5.06');
 INSERT INTO track VALUES (6, 1, 11, 'Today Dear', '4.49');
 
+/*Dawn of Midi’s _Dysnomia_ */
 INSERT INTO played VALUES ("20060814102103");
+/* Interpol’s _Turn on the Bright Lights_*/
 INSERT INTO played VALUES ("20060814102522");
+/*The Chrome Cranks’ _Dead Cool_ */
 INSERT INTO played VALUES ("20060814103025");
+/* The Melvins’ _Houdini_*/
 INSERT INTO played VALUES ("20060814103654");
+/* Mogwai’s _Come on Die Young_*/
 INSERT INTO played VALUES ("20060814104143");
+/*Mogwai’s _Every Country’s Sun_*/
 INSERT INTO played VALUES ("20060814104337");
+/* Warpaint’s _Heads Up_*/
 INSERT INTO played VALUES ("20060814104721");
