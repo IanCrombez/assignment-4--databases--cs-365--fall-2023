@@ -15,6 +15,7 @@
 +---------------------------------------------+
 ```
 */
+SELECT CONCAT(artist.artist_name, ' recorded ', album.album_name) AS Recording FROM artist JOIN album ON artist.artist_id = album.artist_id;
 
 
 
@@ -39,25 +40,27 @@
 +-------------------+---------------------------+
 ```
 */
+/*below does make the table above but check later to see if changing the = to IN and adding a join counts*/
+SELECT artist_name, album_name FROM artist JOIN album ON artist.artist_id = album.artist_id
+WHERE artist.artist_id IN (SELECT artist_id FROM album);
 
 
 
-
-/*`Compiles` =  that shows all the albums created by artists
+/*Using the relation `Compiles` =  that shows all the albums created by artists
 exactly like the output above.*/
 
 
+SELECT artist.artist_name, album.album_name FROM artist JOIN album ON artist.artist_id = album.artist_id;
 
 
-
-/* `Contains` = that shows all the tracks belonging to every album.
+/*Using the relation `Contains` = that shows all the tracks belonging to every album.
  Ensure you include track name and album name.*/
 
+SELECT album.album_name, track.track_name FROM album JOIN track ON album.artist_id = track.artist_id AND album.album_id = track.album_id;
 
-
-
-
-
-/* `WasPlayedAt` = that shows all played tracks. 
+/*Using the relation `WasPlayedAt` = that shows all played tracks. 
 Ensure you include track name and track time in your output.*/
+
+SELECT track.track_name, track.time, played.played FROM track 
+JOIN played ON track.track_id = played.track_id AND track.album_id = played.album_id AND track.artist_id = played.artist_id;
 
