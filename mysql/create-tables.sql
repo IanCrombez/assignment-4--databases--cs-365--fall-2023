@@ -25,7 +25,8 @@ CREATE TABLE IF NOT EXISTS track (
 CREATE TABLE IF NOT EXISTS played (
   artist_id  INT          NOT NULL,
   album_id   INT          NOT NULL,
+  track_id   INT          NOT NULL,
   played     TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (artist_id, album_id, played),
-  FOREIGN KEY (artist_id, album_id) REFERENCES album(artist_id, album_id)
+  PRIMARY KEY (artist_id, album_id, track_id, played),
+  FOREIGN KEY (artist_id, album_id, track_id) REFERENCES album(artist_id, album_id, track_id)
 );
